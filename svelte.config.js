@@ -15,7 +15,7 @@ const config = {
 		paths: {
 			assets: 'https://web.staging.emerge.gunkulspectrum.co/svelte', // important for locating assets if using path rewriting in the server
 			// base: '/s' // always required to use {base}/path/to/assets
-			base: '/svelte/',
+			base: '/svelte',
 		},
 		 prerender: {
       // Implement handleHttpError for handling 404 errors
