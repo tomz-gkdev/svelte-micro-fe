@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  svelte-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./src:/app/src
+      - ./static:/app/static
+      - ./package.json:/app/package.json
+    command: bash -c "pnpm install && pnpm run build && node build"
+
