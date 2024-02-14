@@ -14,8 +14,19 @@ const config = {
 		adapter: adapter(),
 		paths: {
 			assets: 'https://web.staging.emerge.gunkulspectrum.co/svelte', // important for locating assets if using path rewriting in the server
-			base: '/svelte' // always required to use {base}/path/to/assets
+			// base: '/s' // always required to use {base}/path/to/assets
+			base: '/svelte',
 		},
+		prerender: {
+			// Implement handleHttpError for handling 404 errors
+			handleHttpError({ request, response }) {
+			  if (response?.status === 404) {
+				response.headers['content-type'] = 'text/html';
+				response.body = '<h1>Page Not Found</h1>'; 
+			  }
+			},
+		  },
+		
 	},
 };
 
