@@ -13,8 +13,8 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 		paths: {
-			assets: 'http://localhost/s', // important for locating assets if using path rewriting in the server
-			// base: '/s' // always required to use {base}/path/to/assets
+			assets: 'https://web.staging.emerge.gunkulspectrum.co/svelte', // important for locating assets if using path rewriting in the server
+			base: '/svelte' // always required to use {base}/path/to/assets
 		},
 	},
 };
